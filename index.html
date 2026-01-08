@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fine Shot Studio | Photographer & Videographer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --black:#0b0b0b;
+  --gold:#c9a24d;
+  --soft:#e7cf8a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Manrope,sans-serif;background:var(--black);color:#fff}
+h1,h2,h3,h4{font-family:Cinzel,serif}
+a{text-decoration:none;color:inherit}
+
+/* Intro */
+.intro{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:9999}
+.intro h1{color:var(--gold);font-size:56px;animation:zoom 2.5s forwards}
+.intro p{opacity:0;margin-top:12px;letter-spacing:4px;color:#aaa;animation:fade 1.5s forwards 1.5s}
+@keyframes zoom{from{opacity:0;transform:scale(.6)}to{opacity:1}}
+@keyframes fade{to{opacity:1}}
+
+/* Header */
+header{height:100vh;position:relative;overflow:hidden;background:#000}
+.slides img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0}
+.slides img:nth-child(1){animation:slide 18s infinite}
+.slides img:nth-child(2){animation:slide 18s infinite 6s}
+.slides img:nth-child(3){animation:slide 18s infinite 12s}
+@keyframes slide{0%{opacity:0}10%{opacity:1}30%{opacity:1}40%{opacity:0}}
+header::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55);z-index:1}
+
+/* Hero */
+.hero{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.hero h1{color:var(--gold);font-size:54px}
+.hero p{margin-top:12px;color:#ddd}
+.hero .btns{margin-top:35px;display:flex;gap:20px;flex-wrap:wrap}
+.hero a{padding:14px 40px;border-radius:60px;font-family:Cinzel,serif;letter-spacing:2px;transition:.3s}
+.hero a:hover{transform:scale(1.05)}
+.reserve{border:2px solid var(--gold);color:var(--gold)}
+.enquiry{background:var(--gold);color:#000}
+
+/* Sections */
+section{padding:90px 6%;background:var(--black)}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title h2{color:var(--gold)}
+.section-title p{color:#aaa;margin-top:6px}
+
+/* Owner */
+.owner-box{
+  max-width:900px;
+  margin:auto;
+  background:#111;
+  border:1px solid rgba(201,162,77,.3);
+  padding:40px;
+  border-radius:18px;
+  display:flex;
+  gap:30px;
+  align-items:center;
+  flex-wrap:wrap
+}
+.owner-box img{
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--gold)
+}
+.owner-text p{color:#ccc;line-height:1.7}
+.owner-text h3{color:var(--soft);margin-top:12px}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.card{background:#111;border:1px solid rgba(201,162,77,.3);padding:25px;border-radius:16px;text-align:center;transition:.3s}
+.card:hover{transform:translateY(-10px);border-color:var(--gold)}
+.card h4{color:var(--soft);margin-bottom:10px}
+.card p{font-size:14px;color:#ccc;line-height:1.6}
+
+/* Video */
+.video iframe{width:100%;height:450px;border-radius:18px;border:2px solid var(--gold);background:#000}
+
+/* Instagram */
+.insta{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.insta iframe{width:100%;height:500px;border:none;border-radius:16px;background:#000}
+
+/* Enquiry */
+.form-box{max-width:900px;margin:auto;background:#111;border:1px solid rgba(201,162,77,.3);padding:40px;border-radius:18px}
+.form-box input{width:100%;padding:12px;margin-bottom:14px;background:#000;border:1px solid rgba(201,162,77,.4);color:#fff;border-radius:12px}
+.form-box button{padding:14px 45px;border:none;border-radius:60px;background:var(--gold);color:#000;font-family:Cinzel,serif;letter-spacing:2px;transition:.3s}
+.form-box button:hover{transform:scale(1.05)}
+
+/* Footer */
+footer{
+  background:#000;
+  border-top:2px solid rgba(201,162,77,.5);
+  padding:200px 6% 90px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:60px;
+}
+footer h3{
+  color:var(--gold);
+  margin-bottom:18px;
+  letter-spacing:2px;
+}
+footer p,a{
+  color:#aaa;
+  font-size:15px;
+  line-height:2;
+}
+.copy{
+  text-align:center;
+  margin-top:70px;
+  color:#666;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:36px}
+.video iframe{height:240px}
+.insta iframe{height:420px}
+.owner-box{text-align:center;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<div class="intro" id="intro">
+<h1>Fine Shot Studio</h1>
+<p>Photography · Videography</p>
+</div>
+<script>
+setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()=>document.getElementById("intro").remove(),800);},3000);
+</script>
+
+<header>
+<div class="slides">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1950&q=80">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1950&q=80">
+<img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=1950&q=80">
+</div>
+
+<div class="hero">
+<h1>Fine Shot Studio</h1>
+<p>Wedding Photography & Videography</p>
+<p style="font-size:14px;color:#aaa">Delhi · Mirzapur · Lucknow</p>
+<div class="btns">
+<a class="reserve" href="https://wa.me/919721666066">Reserve Your Date</a>
+<a class="enquiry" href="#enquiry">Enquiry</a>
+</div>
+</div>
+</header>
+
+<section>
+<div class="section-title"><h2>From The Owner</h2></div>
+<div class="owner-box">
+<img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=500&q=80">
+<div class="owner-text">
+<p>“Photography Is Not Just About Cameras, It’s About Feelings, Emotions, And Moments That Stay Alive Forever.”</p>
+<h3>— Akash</h3>
+<p>Founder, Fine Shot Studio</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="section-title"><h2>Our Services</h2></div>
+<div class="services">
+<div class="card"><h4>Wedding Photography</h4><p>Premium Wedding Coverage</p></div>
+<div class="card"><h4>Cinematic Wedding Films</h4><p>Story Based Wedding Films</p></div>
+<div class="card"><h4>Pre Wedding Shoot</h4><p>Creative Couple Shoots</p></div>
+<div class="card"><h4>Baby Shoot</h4><p>Cute & Emotional Moments</p></div>
+<div class="card"><h4>Maternity Shoot</h4><p>Beautiful Motherhood Stories</p></div>
+<div class="card"><h4>Event Coverage</h4><p>Professional Event Photography</p></div>
+</div>
+</section>
+
+<section class="video">
+<div class="section-title"><h2>Watch Our Work</h2></div>
+<iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/889228076935246&show_text=false" allowfullscreen></iframe>
+</section>
+
+<section>
+<div class="section-title"><h2>Our Work</h2></div>
+<div class="insta">
+<iframe src="https://www.instagram.com/p/DTDKqFNkhD4/embed"></iframe>
+<iframe src="https://www.instagram.com/p/DTAlaRqkhAf/embed"></iframe>
+<iframe src="https://www.instagram.com/p/DSfQa2KklxM/embed"></iframe>
+<iframe src="https://www.instagram.com/p/DRd8fOfklPm/embed"></iframe>
+<iframe src="https://www.instagram.com/p/DPiT0wajBJB/embed"></iframe>
+<iframe src="https://www.instagram.com/p/DPfu7zDkslR/embed"></iframe>
+<iframe src="https://www.instagram.com/p/DPQ5tWlEkhP/embed"></iframe>
+<iframe src="https://www.instagram.com/p/DPVeqBlEkfQ/embed"></iframe>
+<iframe src="https://www.instagram.com/p/DOxYSs7CL0D/embed"></iframe>
+<iframe src="https://www.instagram.com/p/DOs_LoqkjFD/embed"></iframe>
+<iframe src="https://www.instagram.com/p/DLKPAESvAx6/embed"></iframe>
+</div>
+</section>
+
+<section id="enquiry">
+<div class="section-title"><h2>Enquiry</h2><p>Book Your Date Now</p></div>
+<div class="form-box">
+<form onsubmit="event.preventDefault();window.location.href='https://wa.me/919721666066';">
+<input placeholder="Your Name" required>
+<input placeholder="Event Date" required>
+<input placeholder="Event Location" required>
+<input placeholder="Event Type" required>
+<div style="text-align:center"><button type="submit">Send Enquiry</button></div>
+</form>
+</div>
+</section>
+
+<footer>
+<div class="footer-grid">
+
+<div>
+<h3>Fine Shot Studio</h3>
+<p>Photography & Videography</p>
+<p>Wedding · Pre Wedding · Baby · Maternity · Events</p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>📞 9721666066</p>
+<p>📞 9335424555</p>
+<p>✉️ fineshotakash@gmail.com</p>
+<p>📍 Delhi · Mirzapur · Lucknow</p>
+</div>
+
+<div>
+<h3>Social</h3>
+<p><a href="https://www.instagram.com/fine_shot_studio/">Instagram</a></p>
+<p><a href="https://www.facebook.com/profile.php?id=61580913263075">Facebook</a></p>
+</div>
+
+</div>
+
+<p class="copy">© 2026 Fine Shot Studio · Crafted With Passion</p>
+</footer>
+
+</body>
+</html>
