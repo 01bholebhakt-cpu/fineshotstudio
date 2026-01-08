@@ -84,9 +84,21 @@ section{padding:90px 6%;background:var(--black)}
 /* Video */
 .video iframe{width:100%;height:450px;border-radius:18px;border:2px solid var(--gold);background:#000}
 
-/* Instagram */
-.insta{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.insta iframe{width:100%;height:500px;border:none;border-radius:16px;background:#000}
+/* Instagram gallery as pure photos */
+.insta{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:0 0;
+}
+.insta img{
+  width:100%;
+  border-radius:16px;
+  object-fit:cover;
+  height:400px;
+  transition:transform .3s;
+}
+.insta img:hover{transform:scale(1.05)}
 
 /* Enquiry */
 .form-box{max-width:900px;margin:auto;background:#111;border:1px solid rgba(201,162,77,.3);padding:40px;border-radius:18px}
@@ -126,7 +138,7 @@ footer p,a{
 @media(max-width:768px){
 .hero h1{font-size:36px}
 .video iframe{height:240px}
-.insta iframe{height:420px}
+.insta img{height:300px}
 .owner-box{text-align:center;justify-content:center}
 }
 </style>
@@ -185,23 +197,31 @@ setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()
 
 <section class="video">
 <div class="section-title"><h2>Watch Our Work</h2></div>
-<iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/889228076935246&show_text=false" allowfullscreen></iframe>
+<iframe
+  src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/889228076935246/&show_text=false&width=900"
+  width="100%"
+  height="450"
+  style="border:none;overflow:hidden;border-radius:18px"
+  scrolling="no"
+  frameborder="0"
+  allowfullscreen="true"
+  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+</iframe>
 </section>
 
 <section>
 <div class="section-title"><h2>Our Work</h2></div>
 <div class="insta">
-<iframe src="https://www.instagram.com/p/DTDKqFNkhD4/embed"></iframe>
-<iframe src="https://www.instagram.com/p/DTAlaRqkhAf/embed"></iframe>
-<iframe src="https://www.instagram.com/p/DSfQa2KklxM/embed"></iframe>
-<iframe src="https://www.instagram.com/p/DRd8fOfklPm/embed"></iframe>
-<iframe src="https://www.instagram.com/p/DPiT0wajBJB/embed"></iframe>
-<iframe src="https://www.instagram.com/p/DPfu7zDkslR/embed"></iframe>
-<iframe src="https://www.instagram.com/p/DPQ5tWlEkhP/embed"></iframe>
-<iframe src="https://www.instagram.com/p/DPVeqBlEkfQ/embed"></iframe>
-<iframe src="https://www.instagram.com/p/DOxYSs7CL0D/embed"></iframe>
-<iframe src="https://www.instagram.com/p/DOs_LoqkjFD/embed"></iframe>
-<iframe src="https://www.instagram.com/p/DLKPAESvAx6/embed"></iframe>
+<img src="https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/DTDKqFNkhD4_n.jpg" alt="Photo 1">
+<img src="https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/DTAlaRqkhAf_n.jpg" alt="Photo 2">
+<img src="https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/DSfQa2KklxM_n.jpg" alt="Photo 3">
+<img src="https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/DRd8fOfklPm_n.jpg" alt="Photo 4">
+<img src="https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/DPiT0wajBJB_n.jpg" alt="Photo 5">
+<img src="https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/DPfu7zDkslR_n.jpg" alt="Photo 6">
+<img src="https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/DPQ5tWlEkhP_n.jpg" alt="Photo 7">
+<img src="https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/DPVeqBlEkfQ_n.jpg" alt="Photo 8">
+<img src="https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/DOxYSs7CL0D_n.jpg" alt="Photo 9">
+<img src="https://instagram.fdel8-1.fna.fbcdn.net/v/t51.2885-15/DOs_LoqkjFD_n.jpg" alt="Photo 10">
 </div>
 </section>
 
