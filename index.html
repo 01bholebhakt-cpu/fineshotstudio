@@ -82,9 +82,15 @@ section{padding:90px 6%;background:var(--black)}
 .card p{font-size:14px;color:#ccc;line-height:1.6}
 
 /* Video */
-.video iframe{width:100%;height:450px;border-radius:18px;border:2px solid var(--gold);background:#000}
+.video video{
+  width:100%;
+  height:450px;
+  border-radius:18px;
+  border:2px solid var(--gold);
+  background:#000;
+}
 
-/* Instagram gallery as pure photos */
+/* Instagram gallery */
 .insta{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -137,7 +143,7 @@ footer p,a{
 
 @media(max-width:768px){
 .hero h1{font-size:36px}
-.video iframe{height:240px}
+.video video{height:240px}
 .insta img{height:300px}
 .owner-box{text-align:center;justify-content:center}
 }
@@ -197,16 +203,10 @@ setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()
 
 <section class="video">
 <div class="section-title"><h2>Watch Our Work</h2></div>
-<iframe
-  src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/889228076935246/&show_text=false&width=900"
-  width="100%"
-  height="450"
-  style="border:none;overflow:hidden;border-radius:18px"
-  scrolling="no"
-  frameborder="0"
-  allowfullscreen="true"
-  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-</iframe>
+<video controls poster="poster.jpg" style="border-radius:18px">
+  <source src="fine_shot_reel.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 </section>
 
 <section>
