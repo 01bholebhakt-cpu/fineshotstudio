@@ -25,7 +25,7 @@ a{text-decoration:none;color:inherit}
 @keyframes zoom{from{opacity:0;transform:scale(.6)}to{opacity:1}}
 @keyframes fade{to{opacity:1}}
 
-header{height:100vh;position:relative;overflow:hidden;background:#000}
+header{height:100vh;position:relative;overflow:hidden}
 .slides img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0}
 .slides img:nth-child(1){animation:slide 18s infinite}
 .slides img:nth-child(2){animation:slide 18s infinite 6s}
@@ -42,35 +42,39 @@ header::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55);z-
 .reserve{border:2px solid var(--gold);color:var(--gold)}
 .enquiry{background:var(--gold);color:#000}
 
-section{padding:90px 6%;background:var(--black)}
+section{padding:90px 6%}
 .section-title{text-align:center;margin-bottom:50px}
 .section-title h2{color:var(--gold)}
 .section-title p{color:#aaa;margin-top:6px}
 
+/* OWNER */
 .owner-box{max-width:900px;margin:auto;background:#111;border:1px solid rgba(201,162,77,.3);padding:40px;border-radius:18px;display:flex;gap:30px;align-items:center;flex-wrap:wrap}
 .owner-box img{width:170px;height:170px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)}
 .owner-text p{color:#ccc;line-height:1.7}
 .owner-text h3{color:var(--soft);margin-top:12px}
 
+/* SERVICES */
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
 .card{background:#111;border:1px solid rgba(201,162,77,.3);padding:25px;border-radius:16px;text-align:center;transition:.3s}
 .card:hover{transform:translateY(-10px);border-color:var(--gold)}
-.card h4{color:var(--soft);margin-bottom:10px}
-.card p{font-size:14px;color:#ccc;line-height:1.6}
+.card h4{color:var(--soft)}
+.card p{font-size:14px;color:#ccc}
 
 /* REVIEWS */
 .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;max-width:1100px;margin:auto}
 .review-card{background:#111;border:1px solid rgba(201,162,77,.3);padding:30px;border-radius:18px;transition:.3s}
 .review-card:hover{transform:translateY(-8px);border-color:var(--gold)}
-.review-card p{font-size:14px;color:#ccc;line-height:1.7}
-.review-card h4{margin-top:18px;color:var(--soft);letter-spacing:1px}
+.review-card p{color:#ccc;line-height:1.7}
+.review-card h4{margin-top:15px;color:var(--soft)}
 .review-card span{font-size:13px;color:#888}
 
+/* VIDEO */
 .video iframe{width:100%;height:480px;border-radius:18px;border:2px solid var(--gold)}
 
+/* INSTAGRAM */
 .insta{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
-.insta iframe{width:100%;height:480px;border-radius:18px;border:1px solid rgba(201,162,77,.4)}
 
+/* FORM */
 .form-box{max-width:900px;margin:auto;background:#111;border:1px solid rgba(201,162,77,.3);padding:40px;border-radius:18px}
 .form-box input{width:100%;padding:12px;margin-bottom:14px;background:#000;border:1px solid rgba(201,162,77,.4);color:#fff;border-radius:12px}
 .form-box button{padding:14px 45px;border:none;border-radius:60px;background:var(--gold);color:#000;font-family:Cinzel,serif;letter-spacing:2px;transition:.3s}
@@ -78,9 +82,9 @@ section{padding:90px 6%;background:var(--black)}
 
 footer{background:#000;border-top:2px solid rgba(201,162,77,.5);padding:200px 6% 90px}
 .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:60px}
-footer h3{color:var(--gold);margin-bottom:18px;letter-spacing:2px}
-footer p,a{color:#aaa;font-size:15px;line-height:2}
-.copy{text-align:center;margin-top:70px;color:#666;font-size:13px;letter-spacing:1px}
+footer h3{color:var(--gold)}
+footer p,a{color:#aaa;line-height:2}
+.copy{text-align:center;margin-top:70px;color:#666;font-size:13px}
 
 @media(max-width:768px){
 .hero h1{font-size:36px}
@@ -97,7 +101,7 @@ footer p,a{color:#aaa;font-size:15px;line-height:2}
 <p>Photography · Videography</p>
 </div>
 <script>
-setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()=>document.getElementById("intro").remove(),800);},3000);
+setTimeout(()=>{document.getElementById("intro").remove()},3000);
 </script>
 
 <header>
@@ -117,53 +121,66 @@ setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()
 </div>
 </header>
 
+<!-- OWNER -->
+<section>
+<div class="section-title"><h2>From The Owner</h2></div>
+<div class="owner-box">
+<img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39">
+<div class="owner-text">
+<p>“Photography is not just about cameras, it’s about emotions, trust and moments that live forever.”</p>
+<h3>— Akash</h3>
+<p>Founder, Fine Shot Studio</p>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
 <section>
 <div class="section-title"><h2>Our Services</h2></div>
 <div class="services">
 <div class="card"><h4>Wedding Photography</h4><p>Premium Wedding Coverage</p></div>
-<div class="card"><h4>Cinematic Wedding Films</h4><p>Story Based Wedding Films</p></div>
+<div class="card"><h4>Cinematic Wedding Films</h4><p>Story Based Films</p></div>
 <div class="card"><h4>Pre Wedding Shoot</h4><p>Creative Couple Shoots</p></div>
 <div class="card"><h4>Baby Shoot</h4><p>Cute & Emotional Moments</p></div>
 <div class="card"><h4>Maternity Shoot</h4><p>Beautiful Motherhood Stories</p></div>
-<div class="card"><h4>Event Coverage</h4><p>Professional Event Photography</p></div>
+<div class="card"><h4>Event Coverage</h4><p>Professional Events</p></div>
 </div>
 </section>
 
+<!-- VIDEO -->
+<section class="video">
+<div class="section-title"><h2>Watch Our Film</h2></div>
+<div style="max-width:1100px;margin:auto">
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/SdkkoyX4C_c" frameborder="0" allowfullscreen></iframe>
+</div>
+</section>
+
+<!-- INSTAGRAM -->
 <section>
-<div class="section-title">
-<h2>Client Reviews</h2>
-<p>Words from our couples</p>
+<div class="section-title"><h2>Instagram Highlights</h2></div>
+<div class="insta">
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DSfQa2KklxM/" data-instgrm-version="14"></blockquote>
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPxxhTQDHid/" data-instgrm-version="14"></blockquote>
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPvpOCLDJge/" data-instgrm-version="14"></blockquote>
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPVeqBlEkfQ/" data-instgrm-version="14"></blockquote>
 </div>
+<script async src="https://www.instagram.com/embed.js"></script>
+</section>
 
+<!-- REVIEWS -->
+<section>
+<div class="section-title"><h2>Client Reviews</h2></div>
 <div class="reviews">
-<div class="review-card">
-<p>“Fine Shot Studio ne hamari wedding ko dream bana diya. Har emotion perfect tha.”</p>
-<h4>Rahul & Pooja</h4>
-<span>Wedding Couple</span>
-</div>
-
-<div class="review-card">
-<p>“Cinematic film dekh kar aankhon me aansu aa gaye. Highly professional team.”</p>
-<h4>Amit & Neha</h4>
-<span>Wedding Couple</span>
-</div>
-
-<div class="review-card">
-<p>“Pre wedding shoot ka experience bahut hi smooth aur creative raha.”</p>
-<h4>Vikas & Shreya</h4>
-<span>Pre Wedding</span>
-</div>
-
-<div class="review-card">
-<p>“Best decision tha Fine Shot Studio choose karna. Lifetime memories mil gayi.”</p>
-<h4>Rohit & Anjali</h4>
-<span>Wedding Couple</span>
-</div>
+<div class="review-card"><p>“Wedding bilkul dream jaisi capture hui.”</p><h4>Rahul & Pooja</h4><span>Wedding Couple</span></div>
+<div class="review-card"><p>“Cinematic film dekh ke rona aa gaya.”</p><h4>Amit & Neha</h4><span>Wedding Couple</span></div>
+<div class="review-card"><p>“Pre wedding shoot perfect tha.”</p><h4>Vikas & Shreya</h4><span>Pre Wedding</span></div>
+<div class="review-card"><p>“Lifetime memories mil gayi.”</p><h4>Rohit & Anjali</h4><span>Wedding Couple</span></div>
 </div>
 </section>
 
+<!-- ENQUIRY FORM -->
 <section id="enquiry">
-<div class="section-title"><h2>Enquiry</h2><p>Book Your Date Now</p></div>
+<div class="section-title"><h2>Enquiry</h2></div>
 <div class="form-box">
 <form onsubmit="event.preventDefault();window.location.href='https://wa.me/919721666066';">
 <input placeholder="Your Name" required>
@@ -175,6 +192,7 @@ setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
 <div class="footer-grid">
 <div>
@@ -188,11 +206,11 @@ setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()
 </div>
 <div>
 <h3>Social</h3>
-<p><a href="#">Instagram</a></p>
-<p><a href="#">Facebook</a></p>
+<p><a href="https://www.instagram.com/fine_shot_studio/">Instagram</a></p>
+<p><a href="https://www.facebook.com/profile.php?id=61580913263075">Facebook</a></p>
 </div>
 </div>
-<p class="copy">© 2026 Fine Shot Studio</p>
+<p class="copy">© 2026 Fine Shot Studio · Crafted With Passion</p>
 </footer>
 
 </body>
