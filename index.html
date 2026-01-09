@@ -58,6 +58,14 @@ section{padding:90px 6%;background:var(--black)}
 .card h4{color:var(--soft);margin-bottom:10px}
 .card p{font-size:14px;color:#ccc;line-height:1.6}
 
+/* REVIEWS */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;max-width:1100px;margin:auto}
+.review-card{background:#111;border:1px solid rgba(201,162,77,.3);padding:30px;border-radius:18px;transition:.3s}
+.review-card:hover{transform:translateY(-8px);border-color:var(--gold)}
+.review-card p{font-size:14px;color:#ccc;line-height:1.7}
+.review-card h4{margin-top:18px;color:var(--soft);letter-spacing:1px}
+.review-card span{font-size:13px;color:#888}
+
 .video iframe{width:100%;height:480px;border-radius:18px;border:2px solid var(--gold)}
 
 .insta{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
@@ -94,9 +102,9 @@ setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()
 
 <header>
 <div class="slides">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1950&q=80">
-<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1950&q=80">
-<img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?auto=format&fit=crop&w=1950&q=80">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf">
+<img src="https://images.unsplash.com/photo-1530023367847-a683933f4172">
 </div>
 <div class="hero">
 <h1>Fine Shot Studio</h1>
@@ -110,18 +118,6 @@ setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()
 </header>
 
 <section>
-<div class="section-title"><h2>From The Owner</h2></div>
-<div class="owner-box">
-<img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=500&q=80">
-<div class="owner-text">
-<p>“Photography Is Not Just About Cameras, It’s About Feelings, Emotions, And Moments That Stay Alive Forever.”</p>
-<h3>— Akash</h3>
-<p>Founder, Fine Shot Studio</p>
-</div>
-</div>
-</section>
-
-<section>
 <div class="section-title"><h2>Our Services</h2></div>
 <div class="services">
 <div class="card"><h4>Wedding Photography</h4><p>Premium Wedding Coverage</p></div>
@@ -133,26 +129,37 @@ setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()
 </div>
 </section>
 
-<section class="video">
-<div class="section-title"><h2>Watch Our Film</h2></div>
-<div style="max-width:1100px;margin:auto">
-<iframe width="100%" height="480" src="https://www.youtube.com/embed/SdkkoyX4C_c" title="Fine Shot Studio Film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-</section>
-
 <section>
-<div class="section-title"><h2>Instagram Highlights</h2><p>Live posts directly on website</p></div>
-<div class="insta">
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DSfQa2KklxM/" data-instgrm-version="14"></blockquote>
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPxxhTQDHid/" data-instgrm-version="14"></blockquote>
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPvpOCLDJge/" data-instgrm-version="14"></blockquote>
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPVeqBlEkfQ/" data-instgrm-version="14"></blockquote>
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPQ5tWlEkhP/" data-instgrm-version="14"></blockquote>
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPF-NtRCN8i/" data-instgrm-version="14"></blockquote>
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DO7zqX3Eouv/" data-instgrm-version="14"></blockquote>
-<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DOxYSs7CL0D/" data-instgrm-version="14"></blockquote>
+<div class="section-title">
+<h2>Client Reviews</h2>
+<p>Words from our couples</p>
 </div>
-<script async src="https://www.instagram.com/embed.js"></script>
+
+<div class="reviews">
+<div class="review-card">
+<p>“Fine Shot Studio ne hamari wedding ko dream bana diya. Har emotion perfect tha.”</p>
+<h4>Rahul & Pooja</h4>
+<span>Wedding Couple</span>
+</div>
+
+<div class="review-card">
+<p>“Cinematic film dekh kar aankhon me aansu aa gaye. Highly professional team.”</p>
+<h4>Amit & Neha</h4>
+<span>Wedding Couple</span>
+</div>
+
+<div class="review-card">
+<p>“Pre wedding shoot ka experience bahut hi smooth aur creative raha.”</p>
+<h4>Vikas & Shreya</h4>
+<span>Pre Wedding</span>
+</div>
+
+<div class="review-card">
+<p>“Best decision tha Fine Shot Studio choose karna. Lifetime memories mil gayi.”</p>
+<h4>Rohit & Anjali</h4>
+<span>Wedding Couple</span>
+</div>
+</div>
 </section>
 
 <section id="enquiry">
@@ -173,22 +180,19 @@ setTimeout(()=>{document.getElementById("intro").style.opacity="0";setTimeout(()
 <div>
 <h3>Fine Shot Studio</h3>
 <p>Photography & Videography</p>
-<p>Wedding · Pre Wedding · Baby · Maternity · Events</p>
 </div>
 <div>
 <h3>Contact</h3>
 <p>📞 9721666066</p>
 <p>📞 9335424555</p>
-<p>✉️ fineshotakash@gmail.com</p>
-<p>📍 Delhi · Mirzapur · Lucknow</p>
 </div>
 <div>
 <h3>Social</h3>
-<p><a href="https://www.instagram.com/fine_shot_studio/">Instagram</a></p>
-<p><a href="https://www.facebook.com/profile.php?id=61580913263075">Facebook</a></p>
+<p><a href="#">Instagram</a></p>
+<p><a href="#">Facebook</a></p>
 </div>
 </div>
-<p class="copy">© 2026 Fine Shot Studio · Crafted With Passion</p>
+<p class="copy">© 2026 Fine Shot Studio</p>
 </footer>
 
 </body>
